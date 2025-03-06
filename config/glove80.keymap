@@ -104,12 +104,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1             &kp F2            &kp F3          &kp F4               &kp F5                                                                                                                                   &kp F6               &kp F7           &kp F8           &kp F9               &kp F10
-&kp EQUAL          &hm LG(LS(X)) N1  &kp N2          &kp N3               &hm LG(LS(NUMBER_4)) N4  &hm LG(LS(N5)) N5                                                                                       &kp N6  &kp N7               &kp N8           &kp N9           &kp N0               &kp MINUS
-&kp TAB            &kp Q             &kp W           &hm LC(LG(SPACE)) E  &hm LC(LEFT_COMMAND) R   &hm SPACE T                                                                                             &kp Y   &hm LS(LA(MINUS)) U  &kp I            &kp O            &kp P                &kp BSLH
-&hm LC(LG(Q)) ESC  &hm LCTRL A       &hm LEFT_ALT S  &hm LEFT_COMMAND D   &lt 1 F                  &hm ENTER G                                                                                             &kp H   &lt 2 J              &hm RIGHT_GUI K  &hm RIGHT_ALT L  &hm RCTRL SEMICOLON  &kp SQT
-&kp GRAVE          &kp Z             &kp X           &hm LG(C) C          &hm LG(LS(V)) V          &kp B              &kp DELETE  &kp LEFT_GUI    &kp LEFT_CONTROL  &layer_td    &kp RIGHT_GUI  &kp RSHFT  &kp N   &kp M                &kp COMMA        &kp DOT          &kp FSLH             &kp PG_UP
-&magic 3 0         &kp HOME          &kp END         &kp LEFT             &kp RIGHT                                   &kp BSPC    &kp LEFT_SHIFT  &kp LG(LS(TAB))   &kp RG(TAB)  &kp RET        &kp SPACE          &kp UP               &kp DOWN         &kp LBKT         &kp RBKT             &kp PG_DN
+&kp F1             &kp F2            &kp F3          &kp F4               &kp F5                                                                                                                                           &kp F6               &kp F7           &kp F8           &kp F9               &kp F10
+&kp EQUAL          &hm LG(LS(X)) N1  &kp N2          &kp N3               &hm LG(LS(NUMBER_4)) N4  &hm LG(LS(N5)) N5                                                                                               &kp N6  &kp N7               &kp N8           &kp N9           &kp N0               &kp MINUS
+&kp TAB            &kp Q             &kp W           &hm LC(LG(SPACE)) E  &hm LC(LEFT_COMMAND) R   &hm SPACE T                                                                                                     &kp Y   &hm LS(LA(MINUS)) U  &kp I            &kp O            &kp P                &kp BSLH
+&hm LC(LG(Q)) ESC  &hm LCTRL A       &hm LEFT_ALT S  &hm LEFT_COMMAND D   &lt 1 F                  &hm ENTER G                                                                                                     &kp H   &lt 2 J              &hm RIGHT_GUI K  &hm RIGHT_ALT L  &hm RCTRL SEMICOLON  &kp SQT
+&kp GRAVE          &kp Z             &kp X           &hm LG(C) C          &hm LG(LS(V)) V          &kp B              &kp DELETE  &kp LEFT_GUI    &kp LEFT_CONTROL  &layer_td            &kp RIGHT_GUI  &kp RSHFT  &kp N   &kp M                &kp COMMA        &kp DOT          &kp FSLH             &kp PG_UP
+&magic 3 0         &kp HOME          &kp END         &kp LEFT             &kp RIGHT                                   &kp BSPC    &kp LEFT_SHIFT  &mt LG(TAB) TAB   &mt RG(RS(TAB)) TAB  &kp RET        &kp SPACE          &kp UP               &kp DOWN         &kp LBKT         &kp RBKT             &kp PG_DN
             >;
         };
 
@@ -142,7 +142,18 @@
 &none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                   &none  &none  &none  &none  &none  &none
 &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                   &none  &none  &none  &none  &none  &bootloader
 &sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none         &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
-&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &to 5
+&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &to 0
+            >;
+        };
+
+        Mission_Control {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                                                                  &trans  &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &kp UP_ARROW  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans        &trans  &trans  &trans
             >;
         };
 
